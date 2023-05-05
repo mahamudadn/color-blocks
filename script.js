@@ -13,10 +13,10 @@ function onReady(){
 
 // created an onclick function that will redmove what is clicked.
 
-    // $('#blocks').on('click','.block', removeRed)
-    // $('#blocks').on('click','.block', removeBlue)
-    // $('#blocks').on('click','.block', removeGreen)
-    // $('#blocks').on('click','.block', removeYellow)
+    $('#blocks').on('click','.block', removeRed)
+    $('#blocks').on('click','.block', removeBlue)
+    $('#blocks').on('click','.block', removeGreen)
+    $('#blocks').on('click','.block', removeYellow)
 
 }
 // Defined counting values and gave them a valu of 1.
@@ -52,20 +52,44 @@ function appendyellow() {
     $('#yellow-count').html(yellowCount)
 }
 // Removes Red color when you click on it in DOM.
+//tried to decrement the number count but partialy working
+
 function removeRed(){
+   
     $(this).remove()
-    
+    if(redCount > 0 ){
+        redCount --;
+       
+    } 
+    $('#red-count').html(redCount)  
 }
 // Removes Blue color when you click on it in DOM.
+//tried to decrement the number count but partialy working
 function removeBlue(){
     $(this).remove()
-    
+    if(blueCount > 0 ){
+        blueCount --;
+       
+    } 
+    $('#blue-count').html(blueCount) 
 }
 //Removes Green color when you click on it in DOM.
+//tried to decrement the number count but partialy working
 function removeGreen(){
     $(this).remove()
+    if(greenCount > 0 ){
+        greenCount --;
+       
+    } 
+    $('#green-count').html(greenCount)
 }
 // Removes yellow color when you click on it in DOM.
+//tried to decrement the number count but partialy working
 function removeYellow(){
     $(this).remove()
+    if(yellowCount > 0 ){
+        yellowCount --;
+ 
+    } 
+   $('#yellow-count').html(yellowCount)   
 }
